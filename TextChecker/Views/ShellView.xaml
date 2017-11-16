@@ -37,13 +37,13 @@
         
         
         <!--Row 1-->
-        <Button x:Name="LoadPalindrome" Grid.Row="1" Grid.Column="1" Background="LightBlue" >
+        <Button x:Name="oadPalindrome" Grid.Row="1" Grid.Column="1" Background="LightBlue" >
             <TextBlock>
         Palindrom
             </TextBlock>
         </Button>
 
-        <Button x:Name="LoadEvenOrOdd" Grid.Row="1" Grid.Column="3" Background="LightGreen">
+        <Button x:Name="oadEvenOrOdd" Grid.Row="1" Grid.Column="3" Background="LightGreen">
             <TextBlock>
         Even Or Odd
             </TextBlock>
@@ -63,15 +63,9 @@
                 IsSynchronizedWithCurrentItem="True"
                 SelectedIndex="0" />-->
 
-        <ComboBox Name="cmbColors" Grid.Row="3" Grid.Column="1">
-            <ComboBox.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel Orientation="Horizontal">
-                        <Rectangle Fill="{Binding Name}" Width="16" Height="16" Margin="0,2,5,2" />
-                        <TextBlock Text="{Binding Name}" />
-                    </StackPanel>
-                </DataTemplate>
-            </ComboBox.ItemTemplate>
+        <ComboBox  Grid.Row="3" Grid.Column="1">
+            <ComboBoxItem  Selected="LoadPalindrome_Selected">Palindrom</ComboBoxItem>
+            <ComboBoxItem  Selected="LoadEvenOrOdd_Selected">Even or Odd</ComboBoxItem>
         </ComboBox>
 
 

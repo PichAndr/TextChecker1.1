@@ -2,7 +2,7 @@
 {
     using System.Collections.Generic;
     using Caliburn.Micro;
-    public class ShellViewModel : Conductor<object>
+    public class ShellViewModel : Conductor<object>.Collection.OneActive
     {
         public void LoadPalindrome()
         {
@@ -17,6 +17,5 @@
             ActivateItem( new PrimeNumberViewModel() );
         }
 
- 
     }
 }
