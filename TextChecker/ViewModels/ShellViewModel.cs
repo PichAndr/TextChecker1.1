@@ -1,6 +1,5 @@
 ﻿namespace TextChecker.ViewModels
 {
-    using System.Collections.Generic;
     using Caliburn.Micro;
     public class ShellViewModel : Conductor<object>.Collection.OneActive
     {

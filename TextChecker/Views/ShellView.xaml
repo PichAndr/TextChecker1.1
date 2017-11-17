@@ -64,7 +64,7 @@
                 SelectedIndex="0" />-->
 
         <ComboBox  Grid.Row="3" Grid.Column="1">
-            <ComboBoxItem  Selected="LoadPalindrome_Selected">Palindrom</ComboBoxItem>
+            <ComboBoxItem  ListBoxItem.Selected="ComboBoxItem_Selected">Palindrom</ComboBoxItem>
             <ComboBoxItem  Selected="LoadEvenOrOdd_Selected">Even or Odd</ComboBoxItem>
         </ComboBox>
 

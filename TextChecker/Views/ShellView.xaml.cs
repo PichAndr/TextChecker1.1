@@ -1,5 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Data;
+using TextChecker.ViewModels;
 
 namespace TextChecker.Views
 {
@@ -12,21 +13,7 @@ namespace TextChecker.Views
         {
             InitializeComponent();
         }
-
-        private void LoadPalindrome_SourceUpdated( object sender, DataTransferEventArgs e )
-        {
-            
-        }
-               
-        private void LoadEvenOrOdd_SourceUpdated( object sender, DataTransferEventArgs e )
-        {
-
-        }
-
-        private void LoadPrimeNumber_SourceUpdated( object sender, DataTransferEventArgs e )
-        {
-
-        }
+        
 
         private void LoadPalindrome_Selected( object sender, RoutedEventArgs e )
         {
@@ -34,6 +21,11 @@ namespace TextChecker.Views
         }
 
         private void LoadEvenOrOdd_Selected( object sender, RoutedEventArgs e )
+        {
+
+        }
+
+        private void ComboBoxItem_Selected(object sender, RoutedEventArgs e)
         {
 
         }
