@@ -75,7 +75,7 @@
     <Compile Include="ViewModels\PalindromeViewModel.cs" />
     <Compile Include="ViewModels\PrimeNumberViewModel.cs" />
     <Compile Include="ViewModels\ShellViewModel.cs" />
-    <Compile Include="ViewModels\ViewModelBase.cs" />
+    <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="Views\EvenOrOddView.xaml.cs">
       <DependentUpon>EvenOrOddView.xaml</DependentUpon>
     </Compile>

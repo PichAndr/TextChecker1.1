@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
+﻿
 
 namespace TextChecker.ViewModels
 {
-    public class PrimeNumberViewModel : ViewModelBase
+    using System;
+    using System.Text.RegularExpressions;
+    public class PrimeNumberViewModel : BaseViewModel
     {
         public string Text
         {
@@ -15,7 +12,7 @@ namespace TextChecker.ViewModels
             set
             {
                 _text = value;
-                OnPropertyChanged( Text );
+                OnPropertyChanged(Text);
             }
         }
 
@@ -28,39 +25,39 @@ namespace TextChecker.ViewModels
             set
             {
                 _textBlockMessage = value;
-                OnPropertyChanged( "textBlockMessage" );
+                OnPropertyChanged("textBlockMessage");
 
             }
         }
         public void HaveResult()
         {
 
-            if( string.IsNullOrWhiteSpace( Text ) )
+            if (string.IsNullOrWhiteSpace(Text))
             {
                 TextBlockMessage = "Bitte geben Sie einen Zahl ein";
             }
-            else if( Text != null )
+            else if (Text != null)
             {
 
-                Regex zahl = new Regex( "^[0-9]+$" );
-                if( zahl.IsMatch( Text.TrimStart() ) )
+                Regex zahl = new Regex("^[0-9]+$");
+                if (zahl.IsMatch(Text.TrimStart()))
                 {
-                    bool result = Int32.TryParse( Text, out int valueZahl );
+                    bool result = Int32.TryParse(Text, out int valueZahl);
 
-                    if( valueZahl == 3 || valueZahl == 5 || valueZahl == 7 )
+                    if (valueZahl == 3 || valueZahl == 5 || valueZahl == 7)
                     {
                         TextBlockMessage = "Ihre Eingabe " + valueZahl + " ist eine Primzahl";
                     }
-                    else if( valueZahl == 1 || valueZahl == 9)
+                    else if (valueZahl == 1 || valueZahl == 9)
                     {
                         TextBlockMessage = "Ihre Eingabe " + valueZahl + " ist keine Primzahl";
                     }
 
-                    if( valueZahl % 2 != 0 )
+                    if (valueZahl % 2 != 0)
                     {
-                        for( int i = 3; i < Math.Sqrt( valueZahl ); i += 2 )
+                        for (int i = 3; i < Math.Sqrt(valueZahl); i += 2)
                         {
-                            if( valueZahl % i == 0 )
+                            if (valueZahl % i == 0)
                             {
                                 TextBlockMessage = "Ihre Eingabe " + valueZahl + " ist keine Primzahl";
                                 break;
@@ -73,7 +70,7 @@ namespace TextChecker.ViewModels
                     }
                     else
                     {
-                        if( valueZahl == 2 )
+                        if (valueZahl == 2)
                         {
                             TextBlockMessage = "Ihre Eingabe " + valueZahl + " ist eine Primzahl";
                         }

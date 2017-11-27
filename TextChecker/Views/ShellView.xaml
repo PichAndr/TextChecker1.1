@@ -37,13 +37,13 @@
         
         
         <!--Row 1-->
-        <Button x:Name="oadPalindrome" Grid.Row="1" Grid.Column="1" Background="LightBlue" >
+        <Button x:Name="LoadPalindrome" Grid.Row="1" Grid.Column="1" Background="LightBlue">
             <TextBlock>
         Palindrom
             </TextBlock>
         </Button>
 
-        <Button x:Name="oadEvenOrOdd" Grid.Row="1" Grid.Column="3" Background="LightGreen">
+        <Button x:Name="LoadEvenOrOdd" Grid.Row="1" Grid.Column="3" Background="LightGreen">
             <TextBlock>
         Even Or Odd
             </TextBlock>
@@ -55,21 +55,11 @@
             </TextBlock>
         </Button>
 
-        <!--<ComboBox Grid.Row="3" Grid.Column="1"
-                Name="ShellViewModel" 
-                ItemsSource="{Binding LoadPalindrome}" 
-                DisplayMemberPath="Description" 
-                SelectedItem="{Binding Path=id}"
-                IsSynchronizedWithCurrentItem="True"
-                SelectedIndex="0" />-->
 
-        <ComboBox  Grid.Row="3" Grid.Column="1">
-            <ComboBoxItem  ListBoxItem.Selected="ComboBoxItem_Selected">Palindrom</ComboBoxItem>
-            <ComboBoxItem  Selected="LoadEvenOrOdd_Selected">Even or Odd</ComboBoxItem>
-        </ComboBox>
+        
 
 
-        <ContentControl x:Name="ActiveItem" Grid.Row="5" Grid.Column="1" 
+            <ContentControl x:Name="ActiveItem" Grid.Row="5" Grid.Column="1" 
                         Grid.ColumnSpan="13" Grid.RowSpan="7"/>
 
     </Grid>

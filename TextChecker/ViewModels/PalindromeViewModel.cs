@@ -1,7 +1,7 @@
 ﻿namespace TextChecker.ViewModels
 {
     using System.Text.RegularExpressions;
-    public class PalindromeViewModel : ViewModelBase
+    public class PalindromeViewModel : BaseViewModel
     {
         public string Text
         {

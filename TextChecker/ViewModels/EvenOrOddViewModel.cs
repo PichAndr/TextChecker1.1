@@ -2,7 +2,7 @@
 {
     using System;
     using System.Text.RegularExpressions;
-    public class EvenOrOddViewModel : ViewModelBase
+    public class EvenOrOddViewModel : BaseViewModel
     {
         public string Text
         {
